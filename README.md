@@ -1,49 +1,34 @@
-# DeshRide Streamlit Demo
+# DeshRide Rider App
 
-This folder contains a public-friendly Streamlit presentation app for the DeshRide concept.
+This repo now contains a **phone-first React + Vite web app** for the DeshRide concept. It is designed to feel like a real rider booking product, not a presentation deck.
 
 ## Run locally
 
-```bash
-cd deshride_app
-python3 -m pip install -r requirements.txt
-streamlit run app.py
-```
-
-## Public QR setup
-
-The app renders a QR code only when `PUBLIC_APP_URL` is available.
-
-Set it with an environment variable:
+You do **not** need Streamlit.
 
 ```bash
-export PUBLIC_APP_URL="https://your-deshride-demo.streamlit.app"
-streamlit run app.py
+npm install
+npm run dev
 ```
 
-Or add it to Streamlit Community Cloud secrets:
+Then open the local URL shown in the terminal.
 
-```toml
-PUBLIC_APP_URL = "https://your-deshride-demo.streamlit.app"
+## Build for production
+
+```bash
+npm run build
+npm run preview
 ```
 
-## Deploy options
+## Deployment
 
-Any public URL will work for the QR code as long as the app is reachable from a phone browser.
+- The repo includes a GitHub Pages workflow in `.github/workflows/deploy-pages.yml`.
+- It also includes SPA-friendly routing for static hosts.
+- The same app can also be deployed to Vercel because it is a standard Vite SPA with no backend requirements.
 
-### Easiest: Streamlit Community Cloud
+## Product notes
 
-1. Push `deshride_app/` to a GitHub repo.
-2. Create a new Streamlit Community Cloud app.
-3. Point the app to `deshride_app/app.py`.
-4. Add the `PUBLIC_APP_URL` secret after the app URL is live.
-5. Download the QR PNG from the app and place it on your presentation slide if you want a fixed visual.
-
-### Other hosts
-
-You can also run the same app anywhere that can serve a Streamlit process, such as Render, Railway, Fly.io, or your own VM. The only requirement for the QR panel is that `PUBLIC_APP_URL` matches the final public address.
-
-## Notes
-
-- The app is intentionally simulation-only: no login, no backend, and no real payments.
-- All major copy and figures live in `data/deshride_content.json` so the story stays consistent.
+- Search-first rider flow
+- Static stylized Bangladesh route map
+- Simulated booking only
+- No authentication, no real payments, no user data storage
