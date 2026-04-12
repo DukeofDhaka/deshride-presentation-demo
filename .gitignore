@@ -1,0 +1,10 @@
+.DS_Store
+__pycache__/
+.pytest_cache/
+.streamlit/secrets.toml
+.venv/
+venv/
+env/
+.env
+.playwright-cli/
+output/

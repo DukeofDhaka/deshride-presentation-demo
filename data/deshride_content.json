@@ -1,0 +1,379 @@
+{
+  "brand": {
+    "name": "DeshRide",
+    "tagline": "Trusted intercity carpooling for Bangladesh",
+    "one_liner": "A simulated product demo built from the final FINE 691 pitch deck and executive brief.",
+    "hero_title": "A safer way to book intercity spare seats in Bangladesh",
+    "hero_body": "DeshRide combines hub-to-hub booking, prepaid commitment, verified identity, and a bKash-first payment layer so intercity carpooling feels reliable enough to use again.",
+    "demo_notice": "This is a public presentation demo. Routes, booking steps, payments, and trust flows are simulated for storytelling and do not process real transactions."
+  },
+  "overview": {
+    "problem_title": "Why DeshRide exists",
+    "problem_summary": "Intercity travel in Bangladesh is either affordable but rigid, or flexible but weak on trust. The gap is not mobile adoption. The gap is that no trusted, prepaid intercity carpool marketplace exists today.",
+    "problem_points": [
+      "Intercity buses are affordable, but crowded, schedule-bound, and low on recourse when things go wrong.",
+      "Informal ride-sharing already happens through personal networks and Facebook groups, but it is still cash-only, unverified, and unsafe.",
+      "Offline leakage is normal in the market, which weakens safety, reliability, and platform accountability."
+    ],
+    "opportunity_points": [
+      "Bangladesh already has a large mobile-first population and strong comfort with digital payments.",
+      "bKash gives DeshRide a trusted payments rail without having to invent a new wallet.",
+      "A corridor-first launch lets trust data and route density compound where behavior repeats."
+    ],
+    "market_metrics": [
+      {
+        "value": "185M",
+        "label": "Mobile subscriptions",
+        "note": "A wide mobile base makes app discovery and repeat use realistic."
+      },
+      {
+        "value": "80M",
+        "label": "bKash users",
+        "note": "Payments can ride on behavior people already trust."
+      },
+      {
+        "value": "26",
+        "label": "Median age",
+        "note": "A young population supports mobile-first travel coordination."
+      },
+      {
+        "value": "28%",
+        "label": "Gen Z population",
+        "note": "The pilot wedge is comfortable with digital products and flexible travel."
+      },
+      {
+        "value": "60%+",
+        "label": "Rides happen offline",
+        "note": "Leakage creates the trust and safety problem DeshRide is designed to solve."
+      },
+      {
+        "value": "12",
+        "label": "BRTA-licensed operators",
+        "note": "The market is active, but no trusted prepaid intercity carpool leader exists."
+      }
+    ]
+  },
+  "routes": [
+    {
+      "name": "Dhaka-Chattogram",
+      "deshride_fare_bdt": 800,
+      "bus_fare_range": "Tk570-650",
+      "bus_fare_mid_bdt": 610,
+      "trip_time": "6-7 hrs",
+      "pickup_hub": "Gabtoli Bus Terminal, Dhaka",
+      "dropoff_hub": "Agrabad CDA, Chattogram",
+      "highlight": "Anchor corridor with student, work, and repeat family demand.",
+      "why_choose": [
+        "Faster coordination than informal ride matching",
+        "Verified Safe Hub pickup and dropoff",
+        "Prepaid commitment reduces no-shows"
+      ]
+    },
+    {
+      "name": "Dhaka-Sylhet",
+      "deshride_fare_bdt": 700,
+      "bus_fare_range": "Tk520-590",
+      "bus_fare_mid_bdt": 555,
+      "trip_time": "5-6 hrs",
+      "pickup_hub": "Kamalapur Railway Station, Dhaka",
+      "dropoff_hub": "Sylhet Railway Station, Sylhet",
+      "highlight": "Strong fit for repeat student, work, and family travel.",
+      "why_choose": [
+        "Reliable scheduling on a repeat corridor",
+        "Trust-focused booking instead of cash handoff",
+        "Easy return-trip behavior for frequent riders"
+      ]
+    },
+    {
+      "name": "Dhaka-Cox's Bazar",
+      "deshride_fare_bdt": 1000,
+      "bus_fare_range": "Tk700-800",
+      "bus_fare_mid_bdt": 750,
+      "trip_time": "8-9 hrs",
+      "pickup_hub": "Gabtoli Bus Terminal, Dhaka",
+      "dropoff_hub": "Kolatoli Beach Road, Cox's Bazar",
+      "highlight": "A leisure route where comfort and coordination matter.",
+      "why_choose": [
+        "Higher comfort for long-distance leisure travel",
+        "Hub-to-hub pickup keeps the trip predictable",
+        "Ratings, tracking, and post-trip recourse"
+      ]
+    }
+  ],
+  "booking_demo": {
+    "payment_rails": [
+      {
+        "name": "bKash",
+        "label": "Primary rail",
+        "detail": "The core launch rail because users already trust it for everyday transactions."
+      },
+      {
+        "name": "Nagad",
+        "label": "Secondary rail",
+        "detail": "Government-backed and growing quickly, giving the platform a second familiar option."
+      },
+      {
+        "name": "Card",
+        "label": "Tertiary rail",
+        "detail": "Useful for card-holding riders and future broader checkout flexibility."
+      }
+    ],
+    "steps": [
+      {
+        "short": "Search",
+        "title": "Pick a corridor and trip date",
+        "body": "Riders start with a dense corridor, a date, and a seat count. The product stays focused on repeat intercity behavior rather than open-ended routing.",
+        "assurance": "The corridor-first design helps DeshRide build route liquidity instead of spreading too wide."
+      },
+      {
+        "short": "Prepay",
+        "title": "Prepay before the trip starts",
+        "body": "The rider confirms the booking on-platform using bKash first, with Nagad and cards available as supporting rails.",
+        "assurance": "Prepaid commitment reduces no-shows and gives the platform a clean dispute and payout flow."
+      },
+      {
+        "short": "Meet",
+        "title": "Meet at a verified Safe Hub",
+        "body": "Pickup and dropoff happen at named public locations near transport nodes. Riders handle the last mile, but the trade-off improves safety and coordination.",
+        "assurance": "Safe Hubs turn the trip into a repeatable, lower-friction operating model."
+      },
+      {
+        "short": "Travel",
+        "title": "Travel with trust tools active",
+        "body": "Verified identity, trip sharing, and structured support turn a casual match into a more accountable transaction.",
+        "assurance": "Trust data compounds as the same corridor is used again and again."
+      },
+      {
+        "short": "Rate",
+        "title": "Rate the trip and close the payout cycle",
+        "body": "After the ride, both sides rate the experience. The 24-hour dispute window protects riders before the driver receives T+1 payout.",
+        "assurance": "Ratings and completed-trip history strengthen the Reliability Score over time."
+      }
+    ],
+    "trust_badges": [
+      "Verified onboarding",
+      "Safe Hub pickup",
+      "Prepaid booking",
+      "24-hour dispute window",
+      "T+1 driver payout"
+    ]
+  },
+  "why_it_works": {
+    "title": "Why this platform compounds",
+    "subtitle": "Density, trust data, and anti-leakage reinforce each other on every corridor.",
+    "flywheel": [
+      "More drivers improve route coverage and timing flexibility.",
+      "Better coverage attracts more riders on the same corridor.",
+      "More riders improve fill rates and driver earnings.",
+      "Stronger earnings encourage more verified drivers to list."
+    ],
+    "credits": {
+      "headline": "DeshRide Credits keep riders on-platform",
+      "points": [
+        "Riders earn Tk10-15 in credits per completed trip.",
+        "Credits work as partial payment on future rides.",
+        "Those benefits disappear when bookings move off-platform.",
+        "Reliable drivers unlock fuel and maintenance perks as trust builds."
+      ]
+    },
+    "moat_quote": "The moat is not the app alone. It is the density of verified drivers on each corridor, the depth of trust data, and the credits riders have accumulated.",
+    "comparison_rows": [
+      {
+        "player": "DeshRide",
+        "core_job": "Trusted intercity spare-seat booking",
+        "economic_logic": "Corridor density, trust data, prepaid commitment",
+        "what_is_different": "Built for repeat intercity travel instead of instant local rides or scheduled bus inventory"
+      },
+      {
+        "player": "Uber / Pathao",
+        "core_job": "Intracity immediacy",
+        "economic_logic": "Fast local matching and short-haul convenience",
+        "what_is_different": "Optimized for immediate door-to-door mobility, not corridor depth"
+      },
+      {
+        "player": "Shohoz / Jatri",
+        "core_job": "Bus and ticketing inventory",
+        "economic_logic": "Aggregating existing transport capacity",
+        "what_is_different": "Sell scheduled bus seats rather than trusted private spare capacity"
+      }
+    ]
+  },
+  "trust_flow": {
+    "title": "Why this is a fintech business",
+    "subtitle": "The real value is not inventing a new payment rail. It is coordinating payment, settlement, verification, disputes, and future finance layers on top of trusted rails.",
+    "payment_steps": [
+      "Rider prepays via the selected rail",
+      "Platform holds funds in an escrow-style flow",
+      "Trip completes with trust and safety tools active",
+      "24-hour dispute window stays open after the trip",
+      "Driver receives T+1 payout"
+    ],
+    "reliability_score": [
+      "Completion rate",
+      "On-time performance",
+      "Cancellation history",
+      "Verified trip count"
+    ],
+    "future_layers": [
+      {
+        "phase": "Phase 2",
+        "items": [
+          "Last-mile bundles at destination hubs",
+          "DeshRide Credits as a loyalty currency"
+        ]
+      },
+      {
+        "phase": "Phase 3",
+        "items": [
+          "Driver cash-flow advances backed by verified trip history",
+          "Fuel and maintenance partnerships",
+          "Vehicle upgrade financing for top drivers"
+        ]
+      }
+    ]
+  },
+  "economics": {
+    "unit_metrics": [
+      {
+        "value": "Tk797",
+        "label": "Blended avg fare"
+      },
+      {
+        "value": "11%",
+        "label": "Core take rate"
+      },
+      {
+        "value": "Tk250",
+        "label": "Rider CAC proxy"
+      },
+      {
+        "value": "Tk680",
+        "label": "Rider LTV proxy"
+      },
+      {
+        "value": "1.6%",
+        "label": "bKash processing"
+      }
+    ],
+    "projection_rows": [
+      {
+        "year": "Year 1",
+        "corridors": 3,
+        "avg_daily_seats": 251,
+        "gmv_bdt_mn": 73.2,
+        "platform_revenue_bdt_mn": 8.0,
+        "contribution_bdt_mn": 3.3
+      },
+      {
+        "year": "Year 2",
+        "corridors": 6,
+        "avg_daily_seats": 1200,
+        "gmv_bdt_mn": 357.0,
+        "platform_revenue_bdt_mn": 40.7,
+        "contribution_bdt_mn": 18.9
+      },
+      {
+        "year": "Year 3",
+        "corridors": 10,
+        "avg_daily_seats": 2400,
+        "gmv_bdt_mn": 713.9,
+        "platform_revenue_bdt_mn": 85.0,
+        "contribution_bdt_mn": 45.2
+      }
+    ],
+    "valuation_rows": [
+      {
+        "scenario": "Conservative",
+        "m18_daily_seats": 520,
+        "pre_money_usd_mn": 2.8
+      },
+      {
+        "scenario": "Base",
+        "m18_daily_seats": 846,
+        "pre_money_usd_mn": 3.5
+      },
+      {
+        "scenario": "Strong",
+        "m18_daily_seats": 920,
+        "pre_money_usd_mn": 4.2
+      }
+    ],
+    "valuation_note": "Seed-stage valuation is framed around milestone progress, market potential, and comparable deals rather than a precise DCF."
+  },
+  "launch": {
+    "title": "Launch plan, moat, and the ask",
+    "phases": [
+      {
+        "phase": "Phase 1",
+        "window": "Months 1-6",
+        "headline": "Prove the corridor",
+        "bullets": [
+          "Launch 3 corridors with bKash-first payments",
+          "Driver verification and Safe Hub setup",
+          "Youth-first GTM through university ambassadors",
+          "Target: 250+ daily seats"
+        ]
+      },
+      {
+        "phase": "Phase 2",
+        "window": "Months 7-12",
+        "headline": "Build the moat",
+        "bullets": [
+          "Expand to 6 corridors",
+          "Launch DeshRide Credits to reduce leakage",
+          "Add last-mile bundles and DeshRide Connect",
+          "Target: 1,000+ daily seats"
+        ]
+      },
+      {
+        "phase": "Phase 3",
+        "window": "Year 2-3",
+        "headline": "Monetize the data",
+        "bullets": [
+          "Expand to 10 corridors with route dominance",
+          "Offer driver finance, fuel, and vehicle credit partnerships",
+          "Layer partner monetization on top of trust data",
+          "Target: 2,400 daily seats with positive contribution"
+        ]
+      }
+    ],
+    "ask": {
+      "raising_usd": "US$600,000",
+      "pre_money_usd": "US$3.5M",
+      "dilution": "14.6%",
+      "runway": "18 months"
+    },
+    "incumbent_note": [
+      "Uber and Pathao optimize intracity immediacy, not corridor density.",
+      "Shohoz and Jatri sell ticket inventory, not trusted private spare capacity.",
+      "Different product, different moat, different economics."
+    ]
+  },
+  "sources": [
+    {
+      "label": "Final Submission deck",
+      "detail": "Primary structure and metrics for the six-section story in this demo.",
+      "reference": "Final Submission/deshride_pitch_deck_Final.pptx"
+    },
+    {
+      "label": "Executive brief v3",
+      "detail": "Source for the trust, Safe Hub, and finance-layer explanations used in the narrative.",
+      "reference": "Final Submission/deshride_executive_brief_v3.docx"
+    },
+    {
+      "label": "Pathao Connect",
+      "detail": "Supports the offline leakage framing used in the problem section.",
+      "reference": "https://pathao.com/blog/pathao-connect-safe-offline-rides/"
+    },
+    {
+      "label": "bKash About",
+      "detail": "Supports user-scale and market-trust figures for the launch payments rail.",
+      "reference": "https://www.bkash.com/en/about"
+    },
+    {
+      "label": "BTRC mobile and internet pages",
+      "detail": "Supports the mobile subscriptions and digital readiness figures used in the market snapshot.",
+      "reference": "https://btrc.gov.bd"
+    }
+  ]
+}

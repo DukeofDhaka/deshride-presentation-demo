@@ -1,0 +1,4 @@
+streamlit>=1.33,<2.0
+pandas>=2.0,<3.0
+plotly>=5.20,<6.0
+qrcode[pil]>=7.4,<8.0
