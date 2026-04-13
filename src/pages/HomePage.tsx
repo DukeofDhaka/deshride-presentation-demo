@@ -1,8 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import { featuredRideIds, getCity, getRide } from "../data/deshrideData";
 import { SearchForm } from "../components/SearchForm";
 import { RouteMap } from "../components/RouteMap";
-import { RideCard } from "../components/RideCard";
 import type { SearchState } from "../types";
 
 const defaultSearch: SearchState = {
@@ -48,58 +46,6 @@ export function HomePage() {
 
         <div className="hero__visual">
           <RouteMap corridorId="dhaka-sylhet" />
-        </div>
-      </section>
-
-      <section className="section-shell">
-        <div className="section-shell__heading">
-          <div>
-            <p className="section-kicker">What riders see first</p>
-            <h2>Search a route, compare rides, tap into the one that feels right.</h2>
-          </div>
-          <p>
-            The DeshRide flow is simple on purpose: start with where you are going, not with
-            platform theory.
-          </p>
-        </div>
-
-        <div className="feature-row">
-          <div className="feature-card">
-            <strong>{getCity(defaultSearch.from).name}</strong>
-            <span>Start from a known city hub</span>
-          </div>
-          <div className="feature-card">
-            <strong>{getCity(defaultSearch.to).name}</strong>
-            <span>Preview a believable arrival point</span>
-          </div>
-          <div className="feature-card">
-            <strong>Ride confidence</strong>
-            <span>See ratings, rules, and driver habits before you book</span>
-          </div>
-        </div>
-      </section>
-
-      <section className="section-shell section-shell--tight">
-        <div className="section-shell__heading">
-          <div>
-            <p className="section-kicker">Featured rides</p>
-            <h2>Popular departures right now</h2>
-          </div>
-          <p>These are sample rides for the public prototype, but the booking flow feels real.</p>
-        </div>
-
-        <div className="ride-list">
-          {featuredRideIds
-            .map((rideId) => getRide(rideId))
-            .filter((ride): ride is Exclude<typeof ride, undefined> => ride !== undefined)
-            .map((ride) => (
-              <RideCard
-                key={ride.id}
-                ride={ride}
-                queryDate={defaultSearch.date}
-                querySeats={defaultSearch.seats}
-              />
-            ))}
         </div>
       </section>
     </div>

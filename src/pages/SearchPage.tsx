@@ -46,7 +46,7 @@ export function SearchPage() {
   }
 
   return (
-    <section className="page">
+    <section className="page page--search">
       <div className="search-banner">
         <div>
           <p className="section-kicker">Search results</p>
@@ -64,21 +64,33 @@ export function SearchPage() {
         </div>
       </div>
 
-      <SearchForm
-        key={`${searchState.from}-${searchState.to}-${searchState.date}-${searchState.seats}`}
-        initialState={searchState}
-        compact
-        submitLabel="Update search"
-        onSubmit={handleSearch}
-      />
+      <div className="search-toolbar">
+        <SearchForm
+          key={`${searchState.from}-${searchState.to}-${searchState.date}-${searchState.seats}`}
+          initialState={searchState}
+          compact
+          submitLabel="Update search"
+          onSubmit={handleSearch}
+        />
 
-      <div className="results-summary">
-        <p>{corridor.story}</p>
-        <div className="trust-strip trust-strip--compact">
-          <span>Pay in app</span>
-          <span>Verified driver</span>
-          <span>Safe pickup point</span>
+        <div className="results-summary">
+          <div>
+            <p className="section-kicker">Available rides</p>
+            <h2>Choose a driver</h2>
+          </div>
+          <p>{corridor.story}</p>
+          <div className="trust-strip trust-strip--compact">
+            <span>Pay in app</span>
+            <span>Verified driver</span>
+            <span>Safe pickup point</span>
+          </div>
         </div>
+      </div>
+
+      <div className="results-heading">
+        <p>
+          Tap any ride card to open the full driver details, pickup point, and booking screen.
+        </p>
       </div>
 
       <div className="ride-list">

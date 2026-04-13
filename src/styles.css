@@ -112,6 +112,10 @@ main {
   gap: 28px;
 }
 
+.page--search {
+  gap: 20px;
+}
+
 .hero {
   min-height: calc(100svh - 112px);
   display: grid;
@@ -412,9 +416,19 @@ main {
   transition: transform 180ms ease, border-color 180ms ease;
 }
 
-.ride-card:hover {
+.ride-card--interactive {
+  position: relative;
+}
+
+.ride-card:hover,
+.ride-card--interactive:focus-visible {
   transform: translateY(-2px);
   border-color: rgba(222, 101, 71, 0.25);
+}
+
+.ride-card--interactive:focus-visible {
+  outline: 2px solid rgba(222, 101, 71, 0.28);
+  outline-offset: 3px;
 }
 
 .ride-card__top,
@@ -439,7 +453,8 @@ main {
 
 .ride-card__time,
 .ride-card__driver-name,
-.ride-card__price strong {
+.ride-card__price strong,
+.results-summary h2 {
   margin: 0;
   font-weight: 800;
 }
@@ -454,9 +469,35 @@ main {
   font-size: 1.35rem;
 }
 
+.ride-card__hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.ride-card__chevron {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background: rgba(23, 63, 57, 0.08);
+  transition: transform 180ms ease, background-color 180ms ease;
+}
+
+.ride-card--interactive:hover .ride-card__chevron,
+.ride-card--interactive:focus-visible .ride-card__chevron {
+  transform: translateX(4px);
+  background: rgba(222, 101, 71, 0.14);
+}
+
 .ride-card__price span,
 .ride-card__subtle,
 .results-summary p,
+.results-heading p,
 .driver-card p,
 .detail-panel p,
 .sheet p,
@@ -491,7 +532,7 @@ main {
 }
 
 .search-banner,
-.results-summary {
+.search-toolbar {
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
   gap: 24px;
@@ -510,10 +551,31 @@ main {
 }
 
 .results-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
   padding: 18px 20px;
   border-radius: 24px;
   background: rgba(255, 255, 255, 0.7);
   border: 1px solid var(--line);
+}
+
+.results-summary h2 {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: clamp(1.75rem, 3vw, 2.4rem);
+}
+
+.results-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.results-heading p {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.6;
 }
 
 .detail-grid,
@@ -660,7 +722,7 @@ main {
   .hero,
   .section-shell__heading,
   .search-banner,
-  .results-summary,
+  .search-toolbar,
   .detail-grid,
   .confirmation-shell {
     grid-template-columns: 1fr;
@@ -686,6 +748,12 @@ main {
     width: 100%;
     overflow-x: auto;
     padding-bottom: 2px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .site-nav::-webkit-scrollbar {
+    display: none;
   }
 
   .nav-link,
@@ -711,6 +779,24 @@ main {
     max-width: 8ch;
   }
 
+  .page--search {
+    gap: 14px;
+  }
+
+  .page--search .search-banner {
+    gap: 12px;
+  }
+
+  .page--search .search-banner__compact-map,
+  .page--search .results-summary {
+    display: none;
+  }
+
+  .page--search .search-form {
+    padding: 16px;
+    gap: 12px;
+  }
+
   .search-form__grid,
   .confirmation-grid {
     grid-template-columns: 1fr;
@@ -720,7 +806,8 @@ main {
   .ride-card__footer,
   .detail-hero,
   .detail-hero__stats,
-  .confirmation-actions {
+  .confirmation-actions,
+  .results-heading {
     flex-direction: column;
   }
 

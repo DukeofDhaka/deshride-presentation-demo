@@ -11,9 +11,20 @@ interface RideCardProps {
 export function RideCard({ ride, queryDate, querySeats }: RideCardProps) {
   const corridor = getCorridor(ride.corridorId);
   const driver = getDriver(ride.driverId);
+  const rideSearch = createSearchParams({
+    date: queryDate,
+    seats: String(querySeats)
+  }).toString();
 
   return (
-    <article className="ride-card">
+    <Link
+      className="ride-card ride-card--interactive"
+      to={{
+        pathname: `/ride/${ride.id}`,
+        search: rideSearch
+      }}
+      aria-label={`Open details for ${driver.name}'s ${corridor.pickupLabel} to ${corridor.dropoffLabel} ride`}
+    >
       <div className="ride-card__top">
         <div className="ride-card__route">
           <p className="ride-card__time">
@@ -58,19 +69,11 @@ export function RideCard({ ride, queryDate, querySeats }: RideCardProps) {
 
       <div className="ride-card__footer">
         <p>{ride.bookingNote}</p>
-        <Link
-          className="secondary-link"
-          to={{
-            pathname: `/ride/${ride.id}`,
-            search: createSearchParams({
-              date: queryDate,
-              seats: String(querySeats)
-            }).toString()
-          }}
-        >
-          View details
-        </Link>
+        <div className="ride-card__hint" aria-hidden="true">
+          <span>Select this ride</span>
+          <span className="ride-card__chevron">→</span>
+        </div>
       </div>
-    </article>
+    </Link>
   );
 }
